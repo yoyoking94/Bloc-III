@@ -1,0 +1,6 @@
+<h2>Mes Projets</h2>
+<ul>
+  <li *ngFor="let projet of projets">
+    <a [routerLink]="['/projets', projet.id]">{{ projet.nom }}</a>
+  </li>
+</ul>

@@ -1,0 +1,4 @@
+<div *ngFor="let notif of notifications" class="notif">
+  <span>{{ notif.message }}</span> -
+  <small>{{ notif.dateNotification | date : "short" }}</small>
+</div>

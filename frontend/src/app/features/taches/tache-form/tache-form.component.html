@@ -1,0 +1,15 @@
+<form [formGroup]="tacheForm" (ngSubmit)="onSubmit()">
+  <label>Nom de la tâche</label>
+  <input formControlName="nom" />
+  <label>Description</label>
+  <textarea formControlName="description"></textarea>
+  <label>Date d'échéance</label>
+  <input type="date" formControlName="dateEcheance" />
+  <label>Priorité</label>
+  <select formControlName="priorite">
+    <option value="Haute">Haute</option>
+    <option value="Moyenne">Moyenne</option>
+    <option value="Basse">Basse</option>
+  </select>
+  <button type="submit" [disabled]="!tacheForm.valid">Enregistrer</button>
+</form>
